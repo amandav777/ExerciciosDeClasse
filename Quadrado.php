@@ -5,22 +5,29 @@ um retorna a área e outro o perímetro */
 
 class Quadrado
 {
-    public function area(float $altura, float $largura)
+
+    public $altura;
+    public $largura;
+
+
+    public function area()
     {
-        return ($altura * $largura);
+        $area = $this->altura * $this->largura;
+        return $area;
     }
     
-    public function perimetro(float $altura, $largura)
+    public function perimetro()
     {
-        return ($altura + $largura + $altura + $largura);
+        $perimetro = $this->altura + $this->altura + $this->largura + $this->largura;
+        return $perimetro;
     }
+
 
 }
 
+$q1 = new Quadrado();
+$q1->$altura = 20;
+$q1->$largura = 10;
 
-$quad = new Quadrado();
-$resultadoArea = $quad->area(4, 5);
-echo $result . "<br>";
-
-$resultadoPerimetro = $quad->perimetro(4,5);
-echo $result . "<br>";
+echo $q1->area();
+echo $q1->perimetro();
